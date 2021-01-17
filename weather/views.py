@@ -17,7 +17,7 @@ def login_user(request):
             login(request, auth)
             return redirect('/')
         else:
-            messages.error(request, "Kullanici adi veya sifre hatali")
+            messages.error(request, "Invalid Username or Password")
             return HttpResponseRedirect(request.path_info)
     else:
         return render(request, 'weather/login.html')

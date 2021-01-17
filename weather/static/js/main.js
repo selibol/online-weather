@@ -10,8 +10,8 @@ $(document).ready(function () {
 
             Swal.fire({
                   type: 'error',
-                  title: 'Hata',
-                  text: 'Lutfen sehir seciniz'
+                  title: 'Error',
+                  text: 'Please select city'
                 })
                 return false;
         }
@@ -46,8 +46,8 @@ $(document).ready(function () {
         if($('#city').val() === null) {
             Swal.fire({
                   type: 'error',
-                  title: 'Hata',
-                  text: 'Lutfen sehir seciniz'
+                  title: 'Error',
+                  text: 'Please select city'
                 })
                 return false;
         }
