@@ -2,7 +2,12 @@
 
 ## create virtualenv
 
-  ` python -m venv venv`
+  `python -m venv venv`
+  
+## activate venv
+
+ `venv\Scripts\activate`
+
   
  ## install the packages
  
