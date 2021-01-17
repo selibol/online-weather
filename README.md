@@ -4,9 +4,13 @@
 
   `python -m venv venv`
   
-## activate venv
+## activate venv for win
 
  `venv\Scripts\activate`
+
+# activate venv for ubuntu
+
+ `source venv/bin/activate`
 
   
  ## install the packages
