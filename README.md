@@ -8,6 +8,10 @@
  
  `pip install -r requirements.txt`
  
+ ## create user table
+ 
+ `python manage.py migrate`
+ 
  ## create user
  
   `python manage.py createsuperuser`

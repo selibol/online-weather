@@ -23,14 +23,14 @@ def login_user(request):
         return render(request, 'weather/login.html')
 
 
-@login_required
+@login_required(login_url='login')
 def index(request):
     with open('weather/static/city.json', encoding='utf-8') as data:
         cities = json.load(data)
     return render(request, 'weather/index.html', {'cities': cities})
 
 
-@login_required
+@login_required(login_url='login')
 def weather_api(request):
     city = request.GET.get('city')
     num_of_days = request.GET.get('num_of_days')
@@ -60,7 +60,7 @@ def weather_api(request):
     return JsonResponse(json_info, safe=False)
 
 
-@login_required
+@login_required(login_url='login')
 def logout_user(request):
     logout(request)
     return render(request, 'weather/login.html')
