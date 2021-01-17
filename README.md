@@ -8,7 +8,7 @@
 
  `venv\Scripts\activate`
 
-# activate venv for ubuntu
+## activate venv for ubuntu
 
  `source venv/bin/activate`
 
