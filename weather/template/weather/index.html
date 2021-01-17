@@ -1,0 +1,42 @@
+{% extends "weather/base.html" %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <div class="columns">
+        <div class="custom-box">
+            <div id="main-div">
+                <select name="city" id="city" class="custom-select">
+                    <option value="" selected disabled>Sehir Seciniz</option>
+                    {% for city in cities %}
+                    <option value="{{city.name}}">{{city.name}}</option>
+                    {% endfor %}
+                </select>
+                <div>
+                    <button id="btn_three_days" class="btn btn-info custom-btn">3-days</button>
+                    <button id="btn_five_days" class="btn btn-info custom-btn">5-days</button>
+                </div>
+            </div>
+            <div id="three-days"></div>
+            <div id="five-days"></div>
+            <div id="details">
+                <button class="btn btn-info" id="details-btn">Details</button>
+                <button class="btn btn-warning float-right" id="back">Back</button>
+            </div>
+
+        </div>
+        <div class="detail_container">
+            <div id="detail_content" class="detail_content">
+                <div style="position:absolute; top:0; right:0;">
+                    <button class="clsbtn">x</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>

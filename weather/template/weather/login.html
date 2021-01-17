@@ -1,0 +1,38 @@
+{% extends "weather/base.html" %}
+{%  block title %}Login{% endblock %}
+
+<body>
+{% block content %}
+
+<div class="container">
+    <diV class="row">
+
+        <div class="custom-box">
+            {% if messages %}
+            <div class="row">
+                <div>
+                    {% for message in messages %}
+                    <div class="alert alert-warning" role="alert">
+                        <p>{{ message }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <h2>Login</h2>
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <label for="username">Username:</label>
+                <input type="text" name="username">
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+                <input type="submit" name="" class="btn btn-second center" value="Login">
+            </form>
+
+        </div>
+
+
+    </div>
+</diV>
+{% endblock %}
+</body>
